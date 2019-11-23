@@ -1,0 +1,68 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form-login">
+        <h2>Login</h2>
+    <div class="imgcontainer">
+        <img src="../../assets/image/avatar.png" alt="Avatar" class="avatar" width="20%">
+    </div>
+
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }"
+        />
+        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+            <div *ngIf="f.username.errors.required">Username is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+        />
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary login-button">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Login
+        </button>
+        <button routerLink="/register" class="btn btn-primary register-button">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Register
+        </button>
+        <!-- <a routerLink="/register" class="btn btn-link">Register</a> -->
+    </div>
+</form>
+
+
+
+<!-- 
+<form action="/action_page.php" method="post">
+    <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <img src="../../assets/image/avatar.png" alt="Avatar" class="avatar" width="20%">
+    </div>
+
+    <div class="container">
+        <label for="uname">
+            <b>Username</b>
+        </label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="psw">
+            <b>Password</b>
+        </label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button type="submit">Login</button>
+        <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot
+            <a href="#">password?</a>
+        </span>
+    </div>
+</form> -->

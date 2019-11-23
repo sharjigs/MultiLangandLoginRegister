@@ -1,0 +1,9 @@
+{
+    "Title": "Hello {{currentUser}}",
+    "login": "inloggen",
+    "register": "Registreren",
+    "Intro": "Bonjour je m'appelle {{name}}, j'ai {{age}} ans.",
+    "brand": "DE BAND",
+    "love": "Wij houden van muziek",
+    "resource": "Een computerhacker is elke ervaren computer-expert die zijn technische kennis gebruikt om een ​​probleem op te lossen. Hoewel hacker kan verwijzen naar elke ervaren computerprogrammeur, is de term in de populaire cultuur in verband gebracht met een beveiligingshacker, iemand die, met hun technische kennis, bugs of exploits gebruikt om in computersystemen in te breken."
+}

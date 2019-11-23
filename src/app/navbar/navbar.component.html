@@ -1,0 +1,32 @@
+<!-- Navigation -->
+<nav class="w3-bar w3-black">
+    <a routerLink="/home" class="w3-button w3-bar-item">Home</a>
+    <a href="#band" class="w3-button w3-bar-item">Band</a>
+    <a routerLink="/"  class="w3-button w3-bar-item">Tour</a>
+    <a href="#contact" class="w3-button w3-bar-item">Contact</a>
+    <a routerLink="/login" class="w3-button w3-bar-item" *ngIf="!currentUser">Login</a>
+    <a routerLink="/register" class="w3-button w3-bar-item" *ngIf="!currentUser">Register</a>
+    <a href="#contact" class="w3-button w3-bar-item" *ngIf="currentUser" (click)="logout()">Logout</a>
+    <div class="w3-dropdown-hover">
+        <button class="w3-button w3-black">Select Language</button>
+        <div class="w3-dropdown-content w3-bar-block w3-border">
+          <a routerLink="/" class="w3-bar-item w3-button" (click)="switchlang('en')">EN</a>
+          <a routerLink="/" class="w3-bar-item w3-button" (click)="switchlang('fr')">Dutch</a>
+        </div>
+      </div>
+  </nav>
+
+
+  <!-- <nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/">Home</a>
+        
+        <a class="nav-item nav-link" (click)="logout()">Logout</a>
+        <div>
+          {{ 'Intro' | translate:user }}
+        </div>
+        <button (click)="switchlang('en')">en</button>
+        
+        <button (click)="switchlang('fr')">fr</button>
+    </div>
+  </nav> -->
